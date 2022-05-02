@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bank Account Open Form </title>
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <script>
+        function ask() {
+            alert("Are you sure?");
+            document.getElementById("sign").value = "";
+        }
+    </script>
+    <style>
+        * {
+            font-family: 'Noto Serif', serif;
+        }
+
+        .new-line {
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: blue;
+        }
+
+        .new-label {
+            display: block;
+        }
+
+        .new-label1 {
+            margin-left: 2px;
+            display: block;
+        }
+
+        .label1 {
+            color: black;
+            font-size: 16px;
+        }
+
+        .label2 {
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .label3 {
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .calender {
+            margin-left: 8px;
+            margin-top: 4px;
+            height: 20px;
+            width: 20px;
+            content: url("https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png");
+        }
+
+        label {
+            color: #808080;
+        }
+
+        body {
+            margin-left: 2%;
+        }
+
+        .state {
+            margin-left: 10px;
+        }
+
+        .country {
+            margin-left: 10px;
+        }
+
+        button {
+            color: #fff;
+            background-color: #e68f05;
+            font-weight: bold;
+            margin-left: 140px;
+            width: 120px;
+            height: 40px;
+            border-radius: 6px;
+        }
+
+        .fname {
+            margin-left: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #00cccc;
+            font-weight: bold;
+        }
+
+        .sign {
+            margin-left: 350px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #f5cc00;
+        }
+
+        body {
+            background-color: #f8ffc9;
+        }
+
+        .ac_type,
+        .cu_type {
+            color: #08848c;
+            width: 200px;
+            height: 35px;
+            padding-left: 10px;
+            border-radius: 6px;
+        }
+
+        .ac_type,
+        .cu_type::placeholder {
+            background-color: #defbfc;
+        }
+
+        .info {
+            color: #0e57e8;
+        }
+
+        .msg {
+            color: #940dbd;
+        }
+
+        hr {
+            border: 2px solid #6592a3;
+            border-radius: 2px;
+        }
+
+        .citi {
+            color: #12876c;
+        }
+
+        input[type=text] {
+            width: 200px;
+            height: 35px;
+            color: #08848c;
+            background-color: #defbfc;
+            border-radius: 25px;
+            padding-left: 10px;
+        }
+
+        input[type=number] {
+            color: #08848c;
+            width: 200px;
+            height: 35px;
+            background-color: #defbfc;
+            border-radius: 25px;
+            padding-left: 10px;
+        }
+
+        input[type=date] {
+            color: #08848c;
+            width: 200px;
+            height: 35px;
+            background-color: #defbfc;
+            border-radius: 6px;
+            padding-left: 10px;
+        }
+
+        select {
+            color: #08848c;
+            width: 200px;
+            height: 35px;
+            background-color: #defbfc;
+            border-radius: 6px;
+            padding-left: 10px;
+        }
+
+        textarea {
+            color: black;
+            border-radius: 6px;
+            padding-left: 10px;
+            background-color: #defbfc;
+        }
+
+        .joint {
+            color: #ff6600;
+        }
+
+        .joint1 {
+            color: green;
+        }
+
+        .in {
+            color: #ff00ae;
+        }
+
+        .joint2 {
+            color: red;
+        }
+
+        input[type=text]::placeholder {
+            color: #08848c;
+            background-color: #defbfc;
+        }
+
+        input[type=number]::placeholder {
+            color: #00bbc2;
+            background-color: #defbfc;
+        }
+
+        select::placeholder {
+            color: #08848c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Bank Account Registration Form</h1>
+    <hr><br>
+    <!--Main Form -->
+    <form name="reg" class="reg" method="POST" action="">
+        <!-- Fist Option is account type -->
+        <label for="ac_info" class="new-line label1 info">
+            <h2>Account Information</h2>
+        </label><br>
+
+        <label for="ac_type" class="new-line label1 msg"><b>Account Type</b></label>
+        <select class="ac_type" name="ac_type">
+            <option selected disabled>Account Type</option>
+            <option value="sb">Savings Account</option>
+            <option value="ca">Current Account</option>
+            <option value="sa">Salary Account</option>
+        </select><br><br>
+
+        <label for="cu_type" class="new-line label1 msg"><b>Currency Type</b></label>
+        <select class="cu_type" name="cu_type">
+            <option selected disabled>Currency Type</option>
+            <option value="inr">&#8377; Rupees</option>
+            <option value="usd">$ USD</option>
+            <option value="eur">&euro; Euro</option>
+        </select>
+        <br><br>
+        <hr>
+        <p><b class="in">Personal Information</b> The information given in this section is considered as the information
+            of primary
+            account owner information.</p>
+
+        <label for="name" class="new-label label2 msg">Name</label><br>
+        <input type="text" name="prefix" class="prefix" placeholder="Prefix">
+        <input type="text" name="fname" class="fname" placeholder="First Name">
+        <br>
+
+        <br><br>
+        <input type="text" name="lname" class="lname" placeholder="Last Name">
+        <br>
+
+        <br><br>
+
+        <label for="phone" class="new-label label2 msg">Phone Number</label><br>
+        <input type="number" name="cc" class="cc" placeholder="Area Code">
+        <h2 style="display:inline">-</h2>
+        <input type="number" name="phone" class="phone" placeholder="Phone Number">
+        <br>
+
+        <br><br>
+
+        <label for="dob" class="new-label label2 msg">Date of Birth</label><br>
+        <input type="date" name="dob" class="dob">
+        <img class="new-label calender">
+        <label for="date" class="new-lable1">Date</label>
+        <br><br>
+
+        <label for="address" class="new-label label2 msg">Residental Address</label><br>
+        <input type="text" name="street1" class="street1" placeholder="Street Address">
+
+        <br><br>
+
+        <input type="text" name="street2" class="street2" placeholder="Street Address Line2">
+
+        <br><br>
+
+        <input type="text" name="city" class="city" placeholder="City">
+        <input type="text" name="state" class="state" placeholder="State/Province">
+        <br>
+
+        <br>
+
+        <input type="number" name="post" class="post" placeholder="Postal/Zip Code">
+        <select name="country" id="country" class="country">
+            <option selected disabled>Please Select Country</option>
+            <option value="ind">India</option>
+            <option value="us">America</option>
+            <option value="eur">Europe</option>
+        </select>
+        <br><br>
+        <label for="citizen" class="new-line label1 msg"><b>Citizenship:</b></label>
+        <input type="radio" id="us" name="citizen">
+        <label for="us" class="label1 citi">US Citizen</label>
+        <br><input type="radio" id="eu" name="citizen">
+        <label for="eu" class="label1 citi">Europe Citizen</label>
+        <br><input type="radio" name="citizen" class="labe3"><input type="text" placeholder="Other">
+        <br><br>
+        <label for="marrital" class="new-line label1 msg"><b>Marrital Status:</b></label>
+        <select name="marrital">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="married">Married</option>
+            <option value="single">Single</option>
+        </select>
+        <br><br>
+        <label for="social" class="new-line label1 msg"><b>Social Security Number:</b></label>
+        <input type="text" class="txt" name="occupation"><br><br>
+        <label for="ocu" class="new-line label1 msg"><b>Occupation:</b></label>
+        <input type="text" class="txt" name="emp_name"><br><br>
+        <label for="cu_type" class="new-line label1 msg"><b>Employer Name:</b></label>
+        <input type="text" class="txt">
+        <br>
+
+        <br><br>
+
+        <b class="new-label joint">Do you want to add joint owner to the bank account?</b>
+        <input type="radio" name="joint" class="joint" value="yes">
+        <label for="joint" class="label3 joint1">Yes</label><br>
+        <input type="radio" class="joint" name="joint" value="no">
+        <label for="joint" class="label3 joint2">No</label>
+        <br><br>
+        <hr><br>
+
+        <p> By Signing this form, I aknowledge that the information I've given in this form is accurate and I agree all
+            the terms and conditions.</p>
+        <br>
+        <input type="checkbox" name="agree">
+        <label for="agree" class="label1">I agree to <a href="https://google.com/?q=I+am+Learning+HTML">terms &
+                conditions.</a> *</label>
+        <br><br><br><br>
+
+        <label for="date" class="new-label label2 msg">Date</label><br>
+        <input type="date" name="date" class="date">
+        <img class="new-label calender">
+        <label for="date" class="new-label1">Date</label>
+        <br><br>
+        <label for="ac_info" class="new-line label1 msg"><b>Primary Owner Signature</b></label>
+        <textarea id="sign" rows="10" cols="50" name="sign"></textarea>
+        <label for="sign" id="sign1" class="label3 new-line sign">
+            <p onclick="ask()"><u>Clear</u></p>
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
