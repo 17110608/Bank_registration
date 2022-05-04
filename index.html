@@ -65,6 +65,7 @@
 
         body {
             margin-left: 2%;
+            overflow-x: auto;
         }
 
         .state {
@@ -211,6 +212,10 @@
         select::placeholder {
             color: #08848c;
         }
+
+        .flex {
+            display: flex;
+        }
     </style>
 </head>
 
@@ -247,8 +252,10 @@
             account owner information.</p>
 
         <label for="name" class="new-label label2 msg">Name</label><br>
-        <input type="text" name="prefix" class="prefix" placeholder="Prefix">
-        <input type="text" name="fname" class="fname" placeholder="First Name">
+        <div class="flex">
+            <input type="text" name="prefix" class="prefix" placeholder="Prefix">
+            <input type="text" name="fname" class="fname" placeholder="First Name">
+        </div>
         <br>
 
         <br><br>
@@ -258,9 +265,11 @@
         <br><br>
 
         <label for="phone" class="new-label label2 msg">Phone Number</label><br>
-        <input type="number" name="cc" class="cc" placeholder="Area Code">
-        <h2 style="display:inline">-</h2>
-        <input type="number" name="phone" class="phone" placeholder="Phone Number">
+        <div class="flex">
+            <input type="number" name="cc" class="cc" placeholder="Area Code">
+            <h2 style="display:inline">-</h2>
+            <input type="number" name="phone" class="phone" placeholder="Phone Number">
+        </div>
         <br>
 
         <br><br>
@@ -279,20 +288,22 @@
         <input type="text" name="street2" class="street2" placeholder="Street Address Line2">
 
         <br><br>
-
-        <input type="text" name="city" class="city" placeholder="City">
-        <input type="text" name="state" class="state" placeholder="State/Province">
+        <div class="flex">
+            <input type="text" name="city" class="city" placeholder="City">
+            <input type="text" name="state" class="state" placeholder="State/Province">
+        </div>
         <br>
 
         <br>
-
-        <input type="number" name="post" class="post" placeholder="Postal/Zip Code">
-        <select name="country" id="country" class="country">
-            <option selected disabled>Please Select Country</option>
-            <option value="ind">India</option>
-            <option value="us">America</option>
-            <option value="eur">Europe</option>
-        </select>
+        <div class="flex">
+            <input type="number" name="post" class="post" placeholder="Postal/Zip Code">
+            <select name="country" id="country" class="country">
+                <option selected disabled>Please Select Country</option>
+                <option value="ind">India</option>
+                <option value="us">America</option>
+                <option value="eur">Europe</option>
+            </select>
+        </div>
         <br><br>
         <label for="citizen" class="new-line label1 msg"><b>Citizenship:</b></label>
         <input type="radio" id="us" name="citizen">
